@@ -90,11 +90,6 @@ body {
   margin: auto;
 }
 
-/* h1 {
-  font-size: 50px;
-  word-break: break-all;
-} */
-
 .row {
   margin: 8px -16px;
 }
@@ -141,3 +136,6 @@ body {
 #sampleheader {
   color: teal;
 }
+
+/* References 
+Css styling from Bootstrap and W3schools.com */
