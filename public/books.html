@@ -51,44 +51,44 @@
 
         <tbody>
           <tr>
-            <td class="text-center">Aluminum Boxes</td>	
-            <td class="text-center"></td>	
-            <td class="text-center"></td>
-            <td class="text-center"></td>
-            <td class="text-center"></td>
-            <td class="text-center"></td>
+            <td class="text-center">Harry Potter and the Philosopher's Stone</td>	
+            <td class="text-center">J. K. Rowling</td>	
+            <td class="text-center">2000</td>
+            <td class="text-center">Bloomsbury</td>
+            <td class="text-center">224</td>
+            <td class="text-center">6.99</td>
           </tr>
           <tr>
-            <td class="text-center">Engineering Supplies</td>	
-            <td class="text-center"></td>	
-            <td class="text-center"></td>
-            <td class="text-center"></td>
-            <td class="text-center"></td>
-            <td class="text-center"></td>
+            <td class="text-center">Harry Potter and the Chamber of Secrets</td>	
+            <td class="text-center">J. K. Rowling</td>	
+            <td class="text-center">2000</td>
+            <td class="text-center">Scholastic Paperbacks</td>
+            <td class="text-center">341</td>
+            <td class="text-center">6.98</td>
           </tr>
           <tr>
-            <td class="text-center">Top Materials</td>	
-            <td class="text-center"></td>	
-            <td class="text-center"></td>
-            <td class="text-center"></td>
-            <td class="text-center"></td>
-            <td class="text-center"></td>
+            <td class="text-center">Harry Potter and the Prisoner of Azkaban</td>	
+            <td class="text-center">J. K. Rowling</td>	
+            <td class="text-center">2001</td>
+            <td class="text-center">Scholastic Paperbacks</td>
+            <td class="text-center">448</td>
+            <td class="text-center">8.78</td>
           </tr>
           <tr>
-            <td class="text-center">Quality Paints</td>	
-            <td class="text-center"></td>	
-            <td class="text-center"></td>
-            <td class="text-center"></td>
-            <td class="text-center"></td>
-            <td class="text-center"></td>
+            <td class="text-center">Harry Potter and the Goblet of Fire</td>	
+            <td class="text-center">J. K. Rowling</td>	
+            <td class="text-center">2002</td>
+            <td class="text-center">Scholastic Paperbacks</td>
+            <td class="text-center">752</td>
+            <td class="text-center">6.92</td>
           </tr>
           <tr> 
-            <td class="text-center">Luxury Paints</td>	
-            <td class="text-center"></td>	
-            <td class="text-center"></td>
-            <td class="text-center"></td>
-            <td class="text-center"></td>
-            <td class="text-center"></td>
+            <td class="text-center">Harry Potter and the Order of the Phoenix</td>	
+            <td class="text-center">J. K. Rowling</td>	
+            <td class="text-center">2004</td>
+            <td class="text-center">Scholastic Paperbacks</td>
+            <td class="text-center">896</td>
+            <td class="text-center">6.98</td>
           </tr>
         </tbody>
     </table>
@@ -99,22 +99,28 @@
   <div class="container">
     <form action="action_page.php">
   
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <label for="Title">Title</label>
+      <input type="text" id="Title" name="firstname" placeholder="Book Title">
   
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-  
-      <label for="country">Country</label>
-      <select id="country" name="country">
-        <option value="australia">Australia</option>
-        <option value="canada">Canada</option>
-        <option value="usa">USA</option>
-      </select>
-  
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-  
+      <label for="Authors">Authors</label>
+      <input type="text" id="Authors" name="Authors" placeholder="Book Authors">
+      <div class="row">
+      <div class="col-lg-6 col-md-6">
+      <label for="YearPub">Year Published</label>
+      <input type="number" id="YearPub" name="Year Published" placeholder="Year">
+      </div>
+      <div class="col-lg-6 col-md-6">  
+      <label for="Page Count">Page Count</label>
+      <input type="number" id="PGcount" name="Page Count" placeholder="Number 0f Pages">
+      </div>  
+      </div>
+      <br>
+      <label for="Publisher">Publisher</label>
+      <input type="text" id="Publisher" name="Publisher" placeholder="Publisher">
+
+      <label for="MSRP">MSRP</label>
+      <input type="text" id="MSRP" name="MSRP" placeholder="Manufacturer's Suggested Retail Price ">
+      <br><br>
       <input type="submit" value="Submit">
   
     </form>
