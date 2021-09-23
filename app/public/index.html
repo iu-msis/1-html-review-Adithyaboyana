@@ -62,6 +62,12 @@
         <p>
           <a v-bind:href="'mailto:'+person.email"><button>Email</button></a>
         </p>
+        <form v-on:submit.prevent="fetchUserData">
+          <button type="submit">Refresh</button>
+        </form>
+        <p>
+          <br />
+        </p>
       </div>
       <script src="js/index.js"></script>
     </main>
