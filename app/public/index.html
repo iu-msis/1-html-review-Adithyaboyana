@@ -53,7 +53,9 @@
     <main>
       <!-- Profile Card -->
       <div id="offerApp" class="card">
-        <img v-bind:src="person.picture.large" alt="John" style="width: 100%" />
+        <a v-bind:href="person.picture.large" target="_blank">
+          <img v-bind:src="person.picture.large" alt="John" style="width: 100%"
+        /></a>
         <h1>{{person.name.first}} {{person.name.last}}</h1>
         <p class="title">Footballer, Atletico Madrid</p>
         <p>Country : {{person.location.country}}</p>
