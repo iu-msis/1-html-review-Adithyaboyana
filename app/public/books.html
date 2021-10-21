@@ -38,7 +38,7 @@
   </nav>
   <br>  
   <main>
-  <div id="BooksData1">
+  <div id="bookApp">
     <h1 class="h3 mb-3 fw-normal signin">Books</h1>
         <br>
       <table class="table table-bordered table-hover" data-sortable>
@@ -64,7 +64,7 @@
 
             <td>{{ book.Publisher}}</td>
 
-            <td>{{ book.PageCount}}</td>
+            <td>{{ book.Page_Count}}</td>
 
             <td>{{ book.MSRP}}</td>
 
@@ -116,37 +116,39 @@
   </div>
   <!-- Add Form  -->
   <h1 class="h3 mb-3 fw-normal signin"> Add Books</h1>
-  <div class="container">
-    <form action="action_page.php">
-  
-      <label for="Title">Title</label>
-      <input type="text" id="Title" name="firstname" placeholder="Book Title">
-  
-      <label for="Authors">Authors</label>
-      <input type="text" id="Authors" name="Authors" placeholder="Book Authors">
-      <div class="row">
-      <div class="col-lg-6 col-md-6">
-      <label for="YearPub">Year Published</label>
-      <input type="number" id="YearPub" name="Year Published" placeholder="Year">
-      </div>
-      <div class="col-lg-6 col-md-6">  
-      <label for="Page Count">Page Count</label>
-      <input type="number" id="PGcount" name="Page Count" placeholder="Number of Pages">
-      </div>  
-      </div>
-      <br>
-      <label for="Publisher">Publisher</label>
-      <input type="text" id="Publisher" name="Publisher" placeholder="Publisher">
 
-      <label for="MSRP">MSRP</label>
-      <input type="text" id="MSRP" name="MSRP" placeholder="Manufacturer's Suggested Retail Price ">
-      <br><br>
-      <input type="submit" value="Submit">
+  <form v-on:submit="postNewBook">
   
-    </form>
+    <label for="Title">Title</label>
+    <input type="text" v-model="booksform.Title" id="Title" name="Title" placeholder="Book Title">
+
+    <label for="Author">Authors</label>
+    <input type="text" v-model="booksform.Author" id="Author" name="Author" placeholder="Book Authors">
+    <div class="row">
+    <div class="col-lg-6 col-md-6">
+    <label for="YearPublished">YearPublished</label>
+    <input type="number" v-model="booksform.YearPublished" id="YearPublished" name="YearPublished" placeholder="Year">
+    </div>
+    <div class="col-lg-6 col-md-6">  
+    <label for="Page_Count">Page Count</label>
+    <input type="number" v-model="booksform.Page_Count" id="Page_Count" name="Page_Count" placeholder="Number of Pages">
+    </div>  
+    </div>
+    <br>
+    <label for="Publisher">Publisher</label>
+    <input type="text" v-model="booksform.Publisher" id="Publisher" name="Publisher" placeholder="Publisher">
+
+    <label for="MSRP">MSRP</label>
+    <input type="text" v-model="booksform.MSRP" id="MSRP" name="MSRP" placeholder="Manufacturer's Suggested Retail Price ">
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+
+  <div class="container"> 
   </div>
   </footer>
-  <script src="js/books.js"></script>
+  <script src="js/book.js"></script>
   </body>
   </html>
 
