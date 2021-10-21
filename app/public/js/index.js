@@ -22,9 +22,21 @@ const Offer = {
           .catch( (err) => {
               console.error(err);
           })
-
-      }
+          
+      },
+      fetchStudentData() {
+        fetch('/api/student/')
+        .then( response => response.json() )
+        .then( (responseJson) => {
+            console.log(responseJson);
+            this.students = responseJson;
+        })
+        .catch( (err) => {
+            console.error(err);
+        })
+        },
   },
+  
   created() {
       this.fetchUserData();
   } //end created
