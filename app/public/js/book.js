@@ -56,9 +56,9 @@ const book = {
 
         },
 
-        postNewBook(evt) {        
-
-            fetch('api/books/create.php', {
+        postNewBook(evt) {   
+            
+            fetch('/api/books/create.php', {
 
                 method:'POST',
 
@@ -82,8 +82,6 @@ const book = {
 
                 this.books = json;
 
-
-
                 // reset the form
 
                 this.booksform = {};
@@ -97,6 +95,7 @@ const book = {
     created() {
 
         this.fetchBookData();
+        
 
     }
 

@@ -31,7 +31,7 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
-  'INSERT INTO Books (Title, Author, YearPublished, Publisher, Page_Count,MSRP)
+  'INSERT INTO Books (Title, Author, YearPublished, Publisher, Page_Count, MSRP)
   VALUES (?, ?, ?, ?, ?, ?)'
 );
 
@@ -43,6 +43,7 @@ $stmt->execute([
   $_POST['Page_Count'],
   $_POST['MSRP']
 ]);
+
 
 // Get auto-generated PK from DB
 // https://www.php.net/manual/en/pdo.lastinsertid.php
